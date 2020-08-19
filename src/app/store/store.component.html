@@ -1,0 +1,22 @@
+<div class="banner">
+  <p class="bannerTitle">PRODUCTS</p>
+</div>
+<div *ngIf="store; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+  <div class="cardContainer">
+    
+    <a
+      class="card"
+      [routerLink]="['/product', product.id]"
+      *ngFor="let product of store.products"
+    >
+      <div class="imgcontainer">
+        <img src="{{ product.image }}" class="cardImg" alt="product" />
+        <div class="hover-message">Shop now</div>
+      </div>
+      <p>{{ currency(product.price) }}</p>
+      <p>{{ product.product_name.toUpperCase() }}</p>
+    </a>
+  </div>
+</ng-template>
+<ng-template #elseBlock>Loading.</ng-template>

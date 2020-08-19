@@ -1,0 +1,67 @@
+<!-- <header>
+    <a href="#" class>Fixmylife Designs</a>
+    <nav>
+      <a href="#" routerLink="/">Home</a>
+      <a href="#" routerLink="/store">Products</a>
+    </nav>
+
+</header> -->
+
+<header class="App-header">
+  <nav class="navigation">
+    <div class="navLinkContainer navContentWidth">
+      <a routerLink="/" class="navLinks">
+        HOME
+      </a>
+      <a routerLink="/store" class="navLinks">
+        PRODUCTS
+      </a>
+      <!-- <a routerLink="/contact" class="navLinks">
+        CONTACT
+      </a> -->
+    </div>
+    <div class="navContentWidth">
+      <a routerLink="/" class="App-logo">
+        <img
+          src="https://github.com/fixmylifeShop/fixmylife-frontend/blob/master/src/images/fixmylifelogo.png?raw=true"
+          alt="logo"
+          class="App-logo"
+        />
+      </a>
+    </div>
+    <div class="navContentWidth navLeftContent">
+      <!-- <a class="App-link" to="/cart">
+        CART
+      </a> -->
+      <a routerLink="/angular" class="navLinks">
+        ANGULAR
+      </a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <router-outlet (activate)="onActivate($event)"> </router-outlet>
+</div>
+
+<footer>
+  <div class="footerTopicContainer">
+    <div class="footerLinksContainer">
+      <p>PAGES</p>
+      <a href="https://www.instagram.com/fixmylifenyc">
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.youtube.com/grving">
+        <span>Youtube</span>
+      </a>
+      <a href="https://www.duranirving.com">
+        <span class="{space}">Portfolio</span>
+      </a>
+    </div>
+  </div>
+  <div class="footerFeature">
+    <a href="https://www.duranirving.com">
+      BY IRVING DURAN
+    </a>
+  </div>
+</footer>

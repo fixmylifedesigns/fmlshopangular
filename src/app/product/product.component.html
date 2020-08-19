@@ -1,0 +1,23 @@
+<div class="banner"></div>
+<div *ngIf="product; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+  <div class="productContainer">
+    <div class="productImageContainer">
+      <img src="{{ product.image }}" alt="product" />
+    </div>
+
+    <div class="productInfoContainer">
+      <div class="product-price-title">
+        <p class="product-price">{{ currency(product.price) }}</p>
+        <p class="product-name">
+          {{ product.product_name.toUpperCase() }}
+        </p>
+      </div>
+      <button disabled class="addToCartButton" onClick="{addToCart}">
+        ADD TO CART
+      </button>
+      <div class="descriptionContainer">{{ product.description }}</div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #elseBlock>Loading.</ng-template>
