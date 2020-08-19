@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "angular app";
+  title = "hello";
   onActivate(event) {
     let scrollToTop = window.setInterval(() => {
       let pos = window.pageYOffset;
